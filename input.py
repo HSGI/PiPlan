@@ -31,6 +31,6 @@ class Data:
 			]
 		}
 	def export(self, path):
-		f = open(path, "w")
-		f.write(json.dumps(path))
+		f = open(path, "w+")
+		f.write(json.dumps(self.data))
 		f.close()
