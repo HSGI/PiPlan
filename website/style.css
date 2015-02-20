@@ -24,7 +24,7 @@ table {
 }
 
 td {
-	height: 3vw;
+	height: 1.5vw;
 	padding-left: 10px;
 	padding-top: 2px;
 }
@@ -54,8 +54,8 @@ table tr:nth-child(even) td {background-color: #ddd;}
 
 h1 {
 	color: #fff;
-	font-size: 4vw;
-	font-weight: 600;
+	font-size: 2.75vw;
+	font-weight: 400;
 	letter-spacing: -0.5px;
 	font-family: "Arial",sans-serif;
 }
@@ -63,7 +63,9 @@ h1 {
 
 .footer {
 	background-color: #33363b;
-	
+	font-size: 2.75vw;
+	font-weight: 400;
+	color:#FFF;
 	height: 10%;
 }
 
