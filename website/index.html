@@ -2,8 +2,21 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>PiPlan</title>
+		<script language=JavaScript1.2>
+			scrollID=0;
+			vPos=0;
+
+			function onWard()
+			{
+				vPos+=0.2;
+				window.scroll(0,vPos);
+				vPos%=(document.body.scrollHeight-900);
+				scrollID=setTimeout("onWard()",1);
+			}
+		</script>
 	</head>
-	<body>
+	<body onLoad=if(window.scroll)onWard()>
 		<div id="wrapper">
 			<div class="header">
 				<div class="text"><h1>Vertretungsplan vom dd.mm.yyyy</h1></div>
