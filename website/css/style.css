@@ -1,8 +1,6 @@
 html, body {
 	padding: 0px;
 	margin: 0px;
-	width: 100%;
-	height: 100%;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
@@ -21,30 +19,51 @@ section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; f
 table {
 	width: 100%;
 	text-align: left;
+	background-color: #000;
+}
+
+th {
+	background-color: #165a97;
+	color: #fff;
+	font-size: 20px;
 }
 
 td {
-	height: 3vw;
+	font-size: 24px;
+	height: 35px;
 	padding-left: 10px;
-	padding-top: 2px;
+	padding-top: 15px;
 }
 
-table tr:nth-child(odd) td {background-color: #fff;}
-table tr:nth-child(even) td {background-color: #ddd;}
+table tr:nth-child(even) {
+	background-color: #fff;
+	border-color: #fff;
+	
+}
+
+table tr:nth-child(odd) {
+	background-color: #3b8dbd;
+	border-color: #3b8dbd;
+}
 
 
 
 #container {
 	width: 90%;
-	height: 83%;
+	height: 81%;
 	margin: 0 auto;
+	font-family: "Calibri",sans-serif;
 }
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	margin-top: 0px;
 	padding-top: 0px;
 	background: #33363b;
-	height: 7%;
+	height: 90px;
 }
 
 .header .text {
@@ -54,7 +73,7 @@ table tr:nth-child(even) td {background-color: #ddd;}
 
 h1 {
 	color: #fff;
-	font-size: 4vw;
+	font-size: 65px;
 	font-weight: 600;
 	letter-spacing: -0.5px;
 	font-family: "Arial",sans-serif;
@@ -62,22 +81,16 @@ h1 {
 
 
 .footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	background-color: #33363b;
-	
-	height: 10%;
+	height: 45px;
 }
 
 .content {
-	background: #ffffff; /* Old browsers */
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ffffff 0%, #efefef 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ffffff 0%,#efefef 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
-	height: 100%;
-	padding: 10px;
-	
+	height: 100%;	
+	padding-top: 115px;
+	padding-bottom: 70px;
 }
