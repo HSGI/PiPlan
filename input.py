@@ -34,3 +34,9 @@ class Data:
 		f = open(path, "w+")
 		f.write(json.dumps(self.data))
 		f.close()
+
+class Grabber:
+	def __init__(self, path):
+		f = open(path, "r")
+		line = f.readline()
+		self.date = line[-11:]
