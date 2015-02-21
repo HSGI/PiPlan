@@ -46,7 +46,9 @@ table tr:nth-child(odd) {
 	border-color: #3b8dbd;
 }
 
-
+marquee {
+	margin-top: 10px;
+}
 
 #container {
 	width: 90%;
@@ -87,7 +89,8 @@ h1 {
 	right: 0;
 	background-color: #33363b;
 	height: 45px;
-	font-size: 2.75vw;
+	font-family: "Arial",sans-serif;
+	font-size: 25px;
 	font-weight: 400;
 	color:#FFF;
 }
