@@ -75,6 +75,7 @@ h1 {
 	color: #fff;
 	font-size: 65px;
 	font-weight: 600;
+	font-size: 2.75vw;
 	letter-spacing: -0.5px;
 	font-family: "Arial",sans-serif;
 }
@@ -87,6 +88,9 @@ h1 {
 	right: 0;
 	background-color: #33363b;
 	height: 45px;
+	font-size: 2.75vw;
+	font-weight: 400;
+	color:#FFF;
 }
 
 .content {
