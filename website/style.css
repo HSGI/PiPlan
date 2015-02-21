@@ -8,7 +8,7 @@ html, body {
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, 
 samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, 
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, td, article, aside, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, article, aside, 
 canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, 
 section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
@@ -21,6 +21,12 @@ section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; f
 table {
 	width: 100%;
 	text-align: left;
+}
+
+td {
+	height: 3vw;
+	padding-left: 10px;
+	padding-top: 2px;
 }
 
 table tr:nth-child(odd) td {background-color: #fff;}
@@ -71,4 +77,5 @@ h1 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=0 ); /* IE6-9 */
 	height: 100%;
 	padding: 10px;
+	
 }
