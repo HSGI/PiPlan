@@ -39,6 +39,9 @@ section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; f
 h1 {
 	color: #fff;
 	font-size: 4vw;
+	font-weight: 600;
+	letter-spacing: -0.5px;
+	font-family: "Arial",sans-serif;
 }
 
 
@@ -48,6 +51,14 @@ h1 {
 }
 
 .content {
-	background-color: #fff;
+	background: #feffe8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #feffe8 0%, #d6dbbf 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffe8), color-stop(100%,#d6dbbf)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #feffe8 0%,#d6dbbf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #feffe8 0%,#d6dbbf 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #feffe8 0%,#d6dbbf 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #feffe8 0%,#d6dbbf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=0 ); /* IE6-9 */
+
 	height: 100%;
 }
