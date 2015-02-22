@@ -5,19 +5,42 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>PiPlan</title>
 		<script language=JavaScript1.2>
-			scrollID=0;
-			vPos=0;
-
-			function onWard()
-			{
-				vPos+=0.25;
-				window.scroll(0,vPos);
-				vPos%=(document.body.scrollHeight/8);
-				scrollID=setTimeout("onWard()",1);
+		
+			var y = 0;
+		
+			function scrollToBottom ()
+			{				
+				window.scrollBy(0, 1);
+				y += 1;
+				
+				if (y <= document.documentElement.offsetHeight-screen.availHeight+65)
+				{
+					setTimeout("scrollToBottom()", 50);
+				}
+				else
+				{
+					setTimeout("scrollToTop()", 1500);
+				}
 			}
+			
+			function scrollToTop ()
+			{				
+				window.scrollBy(0, -1);
+				y += -1;
+				
+				if (y > 0)
+				{
+					setTimeout("scrollToTop()", 50);
+				}
+				else
+				{
+					setTimeout("scrollToBottom()", 1500);
+				}
+			}
+			
 		</script>
 	</head>
-	<body onLoad=if(window.scroll)onWard()>
+	<body onLoad="scrollToBottom()">
 		<div id="wrapper">
 			<div class="header">
 				<div class="text"><h1>Vertretungsplan vom dd.mm.yyyy</h1></div>
