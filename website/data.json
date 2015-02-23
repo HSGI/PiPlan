@@ -1,6 +1,6 @@
-"header": {
+{"header": {
 	"date": "14.02.15",
-	"weekday": "Donnerstag",
+	"weekday": "Donnerstag"
 },
 "substitutes": [
 	{
@@ -21,4 +21,4 @@
 "motd": [
 	"Message 1",
 	"Message -1"
-]
+]}

@@ -100,3 +100,7 @@ h1 {
 	padding-top: 115px;
 	padding-bottom: 115px;
 }
+
+#date {
+    display: inline;
+}
