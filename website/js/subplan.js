@@ -1,14 +1,18 @@
 var data;
 
 function loadResources() {
+    loadFile("data.json", handleData);
+}
+
+function loadFile(name, callback) {
     var request = getXmlHttpRequest();
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == 200) {
             data = JSON.parse(request.responseText);
-            handleData();
+            callback();
         }
     };
-    request.open("GET", "data.json");
+    request.open("GET", name);
     request.send();
 }
 
