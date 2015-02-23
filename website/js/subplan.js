@@ -1,22 +1,22 @@
-var data;
-
 function loadResources() {
     loadFile("data.json", handleData);
+    loadFile("ticker.txt", handleTicker);
 }
 
 function loadFile(name, callback) {
     var request = getXmlHttpRequest();
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == 200) {
-            data = JSON.parse(request.responseText);
-            callback();
+            var data = request.responseText;
+            callback(data);
         }
     };
     request.open("GET", name);
     request.send();
 }
 
-function handleData() {
+function handleData(data) {
+    data = JSON.parse(data);
     var date = document.querySelector("#date");
     date.textContent = data.header.weekday + " der " + data.header.date;
     var table = document.querySelector(".content table");
@@ -30,6 +30,11 @@ function handleData() {
         }
         table.appendChild(row);
     }
+}
+
+function handleTicker(ticker) {
+    var tickerElement = document.querySelector("#ticker");
+    tickerElement.textContent = ticker;
 }
 
 function  getXmlHttpRequest() {
