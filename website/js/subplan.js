@@ -15,6 +15,17 @@ function loadResources() {
 function handleData() {
     var date = document.querySelector("#date");
     date.textContent = data.header.weekday + " der " + data.header.date;
+    var table = document.querySelector(".content table");
+    for(var index in data.substitutes) {
+        var substitute = data.substitutes[index];
+        var row = document.createElement("tr");
+        for(var key in substitute) {
+            var cell = document.createElement("td");
+            cell.textContent = substitute[key];
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
 }
 
 function  getXmlHttpRequest() {
