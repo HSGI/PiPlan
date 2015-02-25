@@ -90,10 +90,10 @@ h1 {
 }
 
 
-.footer {
+.footer .right {
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	left: 140px;
 	right: 0;
 	background-color: #33363b;
 	height: 45px;
@@ -102,6 +102,25 @@ h1 {
 	font-weight: 400;
 	color:#FFF;
 	z-index: 1;
+}
+
+.footer .left {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 140px;
+	background-color: #33363b;
+	height: 45px;
+	font-family: "Arial",sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	color:#FFF;
+	z-index: 1;
+}
+
+.footer p {
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
 .content {

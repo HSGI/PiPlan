@@ -1,4 +1,4 @@
-function loadRessources() {
+function loadResources() {
     loadFile("data.json", handleData);
     loadFile("ticker.txt", handleTicker);
 }

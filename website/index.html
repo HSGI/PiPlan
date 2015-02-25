@@ -16,8 +16,8 @@
 								 document.getElementsByTagName("th")[0].offsetHeight + 
 								 document.getElementsByClassName("footer")[0].offsetHeight;
 								 
-			    // loadRessources();
-			    setTimeout("scrollToBottom()",1500);
+			    // loadResources();
+			    setTimeout("scrollToBottom()",3000);
 			}
 		
 			function scrollToBottom ()
@@ -33,7 +33,7 @@
 				}
 				else
 				{
-					setTimeout("scrollToTop()", 1500);
+					setTimeout("scrollToTop()", 3000);
 				}
 			}
 			
@@ -48,7 +48,7 @@
 				}
 				else
 				{
-					setTimeout("scrollToBottom()", 1500);
+					setTimeout("scrollToBottom()", 3000);
 				}
 			}
 			
@@ -291,8 +291,23 @@
 				</div>
 			</div>
 			<div class="footer">
-            	<marquee direction="left" scrollamount="2" scrolldelay="1">
-  					<b id="ticker"></b>
+				<div class="left">
+					<p>Es fehlen:</p>
+				</div>
+            	<marquee class="right" direction="left" scrollamount="5" scrolldelay="1">
+					<p id="ticker">
+						++++ Herr Dietrich 
+						++++ Herr Gebhard
+						++++ Frau Gilbert
+						++++ Herr Gnau
+						++++ Frau Herbst
+						++++ Frau Kelly
+						++++ Herr Loos (9.-10.)
+						++++ Frau Lopez
+						++++ Frau Port
+						++++ Herr Ries
+						++++ Herr Schmitt (6.)
+					</p>
 				</marquee>
 			</div>
 		</div>
