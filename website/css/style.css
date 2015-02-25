@@ -1,6 +1,7 @@
 html, body {
 	padding: 0px;
 	margin: 0px;
+	overflow: hidden;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
@@ -13,7 +14,7 @@ section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; f
 #wrapper {
 	width: 100%;
 	height: 100%;
-	background-color: #ebebeb;
+	background-color: #fff;
 }
 
 table {
@@ -35,9 +36,15 @@ td {
 	padding-top: 15px;
 }
 
+table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 80px; left: 0%;}
+table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 80px; left: 15%;}
+table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 80px; left: 25%;}
+table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 80px; left: 40%;}
+table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 80px; left: 55%;}
+
 table tr:nth-child(even) {
-	background-color: #fff;
-	border-color: #fff;
+	background-color: #ebebeb;
+	border-color: #ebebeb;
 	
 }
 
@@ -63,9 +70,10 @@ marquee {
 	left: 0;
 	right: 0;
 	margin-top: 0px;
-	padding-top: 0px;
+	padding-top: 5px;
 	background: #33363b;
-	height: 80px;
+	height: 75px;
+	z-index: 1;
 }
 
 .header .text {
@@ -93,12 +101,16 @@ h1 {
 	font-size: 25px;
 	font-weight: 400;
 	color:#FFF;
+	z-index: 1;
 }
 
 .content {
-	height: 100%;	
-	padding-top: 115px;
-	padding-bottom: 115px;
+	position: absolute;
+	top: 130px;
+	left: 0px;
+	right: 0px;
+	padding-bottom: 45px;
+	z-index: 0;
 }
 
 #date {

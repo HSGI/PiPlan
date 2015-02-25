@@ -2,15 +2,22 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="author" content="The Glorious Leader">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>PiPlan</title>
-		<script language=JavaScript1.2>
+		<script>
 		
 			var y = 0;
+			var overflowHeight = 0;
 
-			function init() {
-			    loadResources();
-			    scrollToBottom();
+			function init()
+			{
+				overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + 
+								 document.getElementsByTagName("th")[0].offsetHeight + 
+								 document.getElementsByClassName("footer")[0].offsetHeight;
+								 
+			    // loadRessources();
+			    setTimeout("scrollToBottom()",1500);
 			}
 		
 			function scrollToBottom ()
@@ -18,9 +25,11 @@
 				window.scrollBy(0, 1);
 				y += 1;
 				
-				if (y <= document.documentElement.offsetHeight-screen.availHeight+65)
+				if (y <= document.getElementsByTagName("table")[0].offsetHeight - 
+						 document.documentElement.clientHeight + 
+						 overflowHeight)
 				{
-					setTimeout("scrollToBottom()", 50);
+					setTimeout("scrollToBottom()", 30);
 				}
 				else
 				{
@@ -35,7 +44,7 @@
 				
 				if (y > 0)
 				{
-					setTimeout("scrollToTop()", 50);
+					setTimeout("scrollToTop()", 30);
 				}
 				else
 				{
@@ -44,12 +53,12 @@
 			}
 			
 		</script>
-        <script src="js/subplan.js"></script>
+		<script src="js/subplan.js"></script>
 	</head>
 	<body onLoad="init()">
 		<div id="wrapper">
 			<div class="header">
-				<div class="text"><h1>Vertretungsplan: <div id="date">dd.mm.yyyy</div></h1></div>
+				<div class="text"><h1>Vertretungsplan vom <div id="date">25.02.2015</div></h1></div>
 			</div>
 			<div id="container">
 				<div class="content">
@@ -63,10 +72,220 @@
 						</colgroup>
 						<tr>
 							<th>Kürzel</th>
-							<th>Zeit</th>
+							<th>Stunde</th>
 							<th>Stufe</th>
 							<th>Raum</th>
 							<th>Anmerkungen</th>
+						</tr> 
+						<tr>
+							<td>DIE</td>
+							<td>1.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Dietrich: frei</td>
+						</tr>	
+						<tr>
+							<td>DIE</td>
+							<td>2.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Dietrich: frei</td>
+						</tr>
+						<tr>
+							<td>DIE</td>
+							<td>7.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Dietrich: frei</td>
+						</tr>
+						<tr>
+							<td>DIE</td>
+							<td>8.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Dietrich: frei</td>
+						</tr>
+						<tr>
+							<td>GEB</td>
+							<td>1.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Gebhard: frei</td>
+						</tr>
+						<tr>
+							<td>GEB</td>
+							<td>1.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Gebhard: frei</td>
+						</tr>
+						<tr>
+							<td>GIL</td>
+							<td>1.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Gilbert: frei</td>
+						</tr>
+						<tr>
+							<td>GIL</td>
+							<td>1.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Gilbert: frei</td>
+						</tr>
+						<tr>
+							<td>GNJ</td>
+							<td>5.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Gnau: frei</td>
+						</tr>
+						<tr>
+							<td>GNJ</td>
+							<td>6.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Gnau: frei</td>
+						</tr>
+						<tr>
+							<td>HER</td>
+							<td>1.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Herbst: frei</td>
+						</tr>
+						<tr>
+							<td>HER</td>
+							<td>2.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Herbst: frei</td>
+						</tr>
+						<tr>
+							<td>KEL</td>
+							<td>3.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Kelly: frei</td>
+						</tr>
+						<tr>
+							<td>KEL</td>
+							<td>4.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Kelly: frei</td>
+						</tr>
+						<tr>
+							<td>LOO</td>
+							<td>3.</td>
+							<td>5c</td>
+							<td>253</td>
+							<td>Loos (Saaländerung)</td>
+						</tr>
+						<tr>
+							<td>LOO</td>
+							<td>4.</td>
+							<td>5c</td>
+							<td>253</td>
+							<td>Loos (Saaländerung)</td>
+						</tr>
+						<tr>
+							<td>LOO</td>
+							<td>9.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Loos: frei</td>
+						</tr>
+						<tr>
+							<td>LOO</td>
+							<td>10.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Loos: frei</td>
+						</tr>
+						<tr>
+							<td>LOP</td>
+							<td>3.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Lopez: frei</td>
+						</tr>
+						<tr>
+							<td>LOP</td>
+							<td>4.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Lopez: frei</td>
+						</tr>
+						<tr>
+							<td>POR</td>
+							<td>1.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Port: frei</td>
+						</tr>
+						<tr>
+							<td>POR</td>
+							<td>2.</td>
+							<td>11</td>
+							<td></td>
+							<td>Kurs Port: frei</td>
+						</tr>
+						<tr>
+							<td>POR</td>
+							<td>3.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Port: frei</td>
+						</tr>
+						<tr>
+							<td>POR</td>
+							<td>4.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Port: frei</td>
+						</tr>
+						<tr>
+							<td>POR</td>
+							<td>7.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Port: frei</td>
+						</tr>
+						<tr>
+							<td>POR</td>
+							<td>8.</td>
+							<td>12</td>
+							<td></td>
+							<td>Kurs Port: frei</td>
+						</tr>
+						<tr>
+							<td>RIE</td>
+							<td>5.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Ries: frei</td>
+						</tr>
+						<tr>
+							<td>RIE</td>
+							<td>6.</td>
+							<td>13</td>
+							<td></td>
+							<td>Kurs Ries: frei</td>
+						</tr>
+						<tr>
+							<td>RÖA</td>
+							<td>3.</td>
+							<td>12</td>
+							<td>151</td>
+							<td>Röse (Saaländerung)</td>
+						</tr>
+						<tr>
+							<td>RÖA</td>
+							<td>4.</td>
+							<td>12</td>
+							<td>151</td>
+							<td>Röse (Saaländerung)</td>
 						</tr>
 					</table>
 				</div>
