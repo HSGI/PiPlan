@@ -35,13 +35,11 @@ function handleData(data) {
 function handleTicker(ticker) {
     var tickerElement = document.querySelector("#ticker");
 	var tickerLines = ticker.split("\n");
-    var tickerList = document.create("ul");
 	for(line in tickerLines) {
-		var el = document.create("li");
-		el.textContent = line;
-		tickerList.appendChild(el);
+		var el = document.createElement("li");
+		el.textContent = tickerLines[line];
+		tickerElement.appendChild(el);
 	}
-	tickerElement.appendChild(tickerList);
 }
 
 function  getXmlHttpRequest() {
