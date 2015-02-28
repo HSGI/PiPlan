@@ -35,11 +35,14 @@ function handleData(data) {
 function handleTicker(ticker) {
     var tickerElement = document.querySelector("#ticker");
 	var tickerLines = ticker.split("\n");
+	var ulElement = document.createElement("ul");
+	ulElement.id = "newsTicker";
 	for(line in tickerLines) {
 		var el = document.createElement("li");
 		el.textContent = tickerLines[line];
-		tickerElement.appendChild(el);
+		ulElement.appendChild(el);
 	}
+	tickerElement.appendChild(ulElement);
 }
 
 function  getXmlHttpRequest() {
