@@ -1,4 +1,4 @@
-++++ Hatte man ihm angehängt: Holländer doch kein Wohnwagen-Dieb
+﻿++++ Hatte man ihm angehängt: Holländer doch kein Wohnwagen-Dieb
 ++++ Käs' sehr rar, sehr rar: Doris Day beklagt Mangel an Milchprodukten
 ++++ In Uniform: Polizist fühlt sich fit genug, nach Feierabend Vorlesungen zu besuchen
 ++++ Inbegriff der Kontinuität: Inuit
@@ -4534,10 +4534,7 @@ Alle im Postillon-Archiv: Hier!
 ++++ Joboffensive: Barilla sucht Spaghettiträger
 ++++ Wasserschaden: Anwalt sieht seine Fälle davonschwimmen
 ++++ Kleiner Wurm: Timmy (9) verwendet Malware, um Trojaner zu zeichnen
-- Das Jubiläum
-++++ Täterätääh: Großes -Jubiläum beim Postillon
-++++ Zur Feier des Tages: Alle bisherigen von 1 bis 99 in 388 Zeilen auf einen Blick
-++++ Ausgemustert: Nicht mehr aktuelle und unlustige Zeilen wurden entfernt
+
 
 ++++ Hund zufrieden: Floh abgekratzt
 ++++ Konsequent: Boxer haut Siegprämie auf den Kopf
@@ -4714,7 +4711,7 @@ Alle im Postillon-Archiv: Hier!
 ++++ Wegen Rubbellos: Russe letzten Rubel los
 ++++ Igitt: Geist von totem Lama spuckt nachts im Zoo
 ++++ Zu schwer: Maharadscha in Heißluftballon muss Palast abwerfen
-Menschenkette von Krümmel bis Brunsbüttel: Der
+
 ++++ Einen Tag Verspätung: Aktivist bildet kürzeste Menschenkette aller Zeiten
 ++++ Neuster Schrei: Afrikanischer Kopfjäger trägt Menschenkette
 ++++ 120.000 Tote: Erster in Menschenkette greift versehentlich in Hochspannungsleitung
@@ -4795,7 +4792,7 @@ Menschenkette von Krümmel bis Brunsbüttel: Der
 ++++ Riskantes Hobby: Wieder vier Spieler beim Poolbillard ertrunken
 ++++ Peinlich: Treibsandopfer würde am liebsten im Boden versinken
 ++++ Praktisch: Fliesenleger macht seiner Angebeteten den Hof
-Vancouver 2010: Der Olympia-
+
 ++++ Gescheiterter Skispringer: "Ich hatte keine Schanze!"
 ++++ Nachträgliche Disqualifikation: Biathlet outet sich als Hetero
 ++++ Absehbar: China gewinnt Gold im Reiskunstlauf
@@ -4838,7 +4835,7 @@ Vancouver 2010: Der Olympia-
 ++++ Kein Spiegelbild: Teenager-Vampirin seit 170 Jahren schlecht geschminkt
 ++++ Rekord: Kleinste Lupe der Welt nur unter dem Mikroskop erkennbar
 ++++ Déjà-vu: 50% der Leser meinen, diese Tickerzeile schon einmal gelesen zu haben
-Berufsrisiko-
+
 ++++ Tragischer Arbeitsunfall I: Priester segnet versehentlich das Zeitliche
 ++++ Tragischer Arbeitsunfall II: Veitstanzlehrer stirbt an Erschöpfung
 ++++ Berufskrankheit I: Feuerschlucker leidet an Burn-Out-Syndrom
@@ -4997,7 +4994,7 @@ Berufsrisiko-
 ++++ Arm: Die Kirchenmäuse des Kölner Doms sammeln für eine Käseglocke
 ++++ Schmerzhaft: Matrose verliert Auge durch Mövenpick
 ++++ So ein Twixer: Mr. Tom snickert Kit-Kat an den Mars und bekommt voll in die Nuts
----- Wegen : sämtliche Pluszeichen aufgebraucht ----
+
 ++++ Zufallstreffen in afrikanischem Waisenhaus: Madonna und Angelina Jolie adoptieren sich gegenseitig
 ++++ zynischer Tod einer Werbeikone: Kleiner Hunger an Lebensmittelvergiftung gestorben
 ++++ Länderspiel: Wales und Ballack geschlagen
