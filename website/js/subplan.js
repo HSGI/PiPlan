@@ -18,7 +18,7 @@ function loadFile(name, callback) {
 function handleData(data) {
     data = JSON.parse(data);
     var date = document.querySelector("#date");
-    date.textContent = data.header.weekday + " der " + data.header.date;
+    date.textContent = data.header.weekday + ", " + data.header.date;
     var table = document.querySelector(".content table");
     for(var index in data.substitutes) {
         var substitute = data.substitutes[index];

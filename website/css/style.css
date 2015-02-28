@@ -36,21 +36,19 @@ td {
 	padding-top: 15px;
 }
 
-table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 80px; left: 0%;}
-table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 80px; left: 15%;}
-table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 80px; left: 25%;}
-table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 80px; left: 40%;}
-table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 80px; left: 55%;}
+table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 125px; left: 0%;}
+table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 125px; left: 15%;}
+table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 125px; left: 25%;}
+table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 125px; left: 40%;}
+table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 125px; left: 55%;}
 
 table tr:nth-child(even) {
-	background-color: #ebebeb;
-	border-color: #ebebeb;
+	background-color: #fff;
 	
 }
 
 table tr:nth-child(odd) {
-	background-color: #3b8dbd;
-	border-color: #3b8dbd;
+	background-color: #54A3D8;
 }
 
 marquee {
@@ -61,6 +59,7 @@ marquee {
 	width: 90%;
 	margin: 0 auto;
 	font-family: "Calibri",sans-serif;
+	margin-top: 100px;
 }
 
 .header {
@@ -73,6 +72,23 @@ marquee {
 	background: #33363b;
 	height: 75px;
 	z-index: 1;
+}
+
+.infobar {
+	position: fixed;
+	top: 80px;
+	height: 45px;
+	width: 100%;
+	background: #3A3C42;
+	z-index: 2;
+}
+
+.infobar p {
+	margin-top: 5px;
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
 }
 
 .header .text {
@@ -124,7 +140,7 @@ h1 {
 
 .content {
 	position: absolute;
-	top: 130px;
+	top: 175px;
 	left: 0px;
 	right: 0px;
 	padding-bottom: 45px;

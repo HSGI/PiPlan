@@ -13,6 +13,7 @@
 			function init()
 			{
 				overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + 
+								 document.getElementsByClassName("infobar")[0].offsetHeight + 
 								 document.getElementsByTagName("th")[0].offsetHeight + 
 								 document.getElementsByClassName("left")[0].offsetHeight;
 								 
@@ -58,7 +59,10 @@
 	<body onLoad="init()">
 		<div id="wrapper">
 			<div class="header">
-				<div class="text"><h1>Vertretungsplan vom <div id="date">25.02.2015</div></h1></div>
+				<div class="text"><h1>Vertretungsplan: <div id="date">25.02.2015</div></h1></div>
+			</div>
+			<div class="infobar">
+				<center><p>Allgemeiner Unterrichtsschluss: Adolf Hitler</p></center>
 			</div>
 			<div id="container">
 				<div class="content">
@@ -292,7 +296,7 @@
 			</div>
 			<div class="footer">
 				<div class="left">
-					<p>Es fehlen:</p>
+					<p>P24:</p>
 				</div>
             	<marquee class="right" direction="left" scrollamount="5" scrolldelay="1">
 					<p id="ticker">
