@@ -48,7 +48,7 @@ class Data:
 		}"""
 	def export(self, path):
 		f = open(path, "w+")
-		f.write(json.dumps(self.data))
+		f.write(json.dumps(self.data, ensure_ascii=False))
 		f.close()
 
 class Substitution:
@@ -70,7 +70,8 @@ class Grabber:
 		self.motd = []
 		line = getLine(f)
 		while(not line.startswith("Es fehlen:")):
-			self.motd.append(line)
+			if(line):
+				self.motd.append(line)
 			line = getLine(f)
 		offset = line.find("Vertretungen:")
 		nameType = "missing"
