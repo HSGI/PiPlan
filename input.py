@@ -8,8 +8,8 @@ class Data:
 		grabber = Grabber(path)
 		self.data = {}
 		self.data["header"] = {}
+		self.data["header"]["weekday"] = grabber.weekday
 		self.data["header"]["date"] = grabber.date
-		#self.data["header"]["weekday"] = ...
 		self.data["substitutes"] = []
 		for sub in grabber.substitutions:
 			asub = {}
@@ -66,6 +66,9 @@ class Grabber:
 			return f.readline()[:-1]
 		line = getLine(f)
 		self.date = line[-10:]
+		self.weekday = line[15:]
+		self.weekday = self.weekday[:-12].strip()
+		
 		getLine(f)
 		self.motd = []
 		line = getLine(f)
