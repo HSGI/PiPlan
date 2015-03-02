@@ -13,6 +13,8 @@ class Data:
 		self.data["header"] = {}
 		self.data["header"]["weekday"] = grabber.weekday
 		self.data["header"]["date"] = grabber.date
+		self.data["missing"] = grabber.missing
+		self.data["hallMonitors"] = grabber.hallMonitors
 		
 		self.data["substitutes"] = []
 		for sub in grabber.substitutes:
@@ -49,10 +51,11 @@ class Grabber:
 			return f.readline()[:-1]
 		
 		line = getLine(f)
-		self.date = line[-10:]
 		
 		self.weekday = line[15:]
 		self.weekday = self.weekday[:-12].strip()
+		
+		self.date = line[-10:]
 		
 		self.motd = []
 		getLine(f)
@@ -63,47 +66,42 @@ class Grabber:
 			line = getLine(f)
 		
 		offset = line.find("Vertretungen:")
-		nameType = "missing"
+		start = "missing"
 		self.missing = []
-		self.hallMonitiors = []
+		self.hallMonitors = []
 		self.substitutes = []
 		
 		line = getLine(f)
 		while(len(line) > 3):
 			if(line.startswith("Pausenaufsichten:")):
-				nameType = "hallMonitiors"
+				start = "hallMonitors"
 			else:
 				name = line[:offset].rstrip()
 				if(name == ""):
 					pass
-				elif(nameType == "missing"):
+				elif(start == "missing"):
 					self.missing.append(name)
-				elif(nameType == "hallMonitiors"):
-					self.hallMonitiors.append(name)
+				elif(start == "hallMonitors"):
+					self.hallMonitors.append(name)
 			
 			substr = line[offset:]
 			substitute = Substitute()
 			
-			posId = substr.find(" ")
-			substitute.id = substr[:posId]
-			substr = substr[posId:].lstrip()
+			substitute.id = substr[:3].strip()
+			substr = substr[4:].lstrip()
 			
-			posLesson = substr.find(" ")
-			substitute.lesson = substr[:posLesson]
-			substr = substr[posLesson:].lstrip()
+			substitute.lesson = substr[:3].strip()
+			substr = substr[4:].lstrip()
 			
-			posGrade = substr.find(" ")
-			substitute.grade = substr[:posGrade]
-			substr = substr[posGrade:].lstrip()
+			substitute.grade = substr[:3].strip()
+			substr = substr[4:].lstrip()
 			
 			roomExists = (len(substr.split("  ")) > 1)
 			if(roomExists):
-				posRoom = substr.find(" ")
-				substitute.room = substr[:posRoom]
-				substr = substr[posRoom:].lstrip()
+				substitute.room = substr[:3].strip()
+				substr = substr[4:].lstrip()
 			
-			posDesc = substr.find(" ")
-			substitute.description = substr
+			substitute.description = substr.strip()
 			
 			self.substitutes.append(substitute)
 			line = getLine(f)
