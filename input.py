@@ -15,7 +15,14 @@ class Data:
 		self.data["header"]["weekday"] = grabber.weekday
 		self.data["header"]["date"] = grabber.date
 		self.data["missing"] = grabber.missing
-		self.data["hallMonitors"] = grabber.hallMonitors
+		
+		self.data["hallMonitors"] = []
+		for monitor in grabber.hallMonitors:
+			tmp = {}
+			tmp["id"] = monitor.id
+			tmp["when"] = monitor.when
+			tmp["what"] = monitor.what
+			self.data["hallMonitors"].append(tmp)
 		
 		self.data["substitutes"] = []
 		for sub in grabber.substitutes:
@@ -42,7 +49,14 @@ class Substitute:
 		self.grade = ""
 		self.room = ""
 		self.description = ""
-	
+
+
+class HallMonitor:
+	def __init__(self):
+		self.id = ""
+		self.when = ""
+		self.what = ""
+
 
 class Grabber:
 	def __init__(self, path):
@@ -54,9 +68,9 @@ class Grabber:
 		line = getLine(f)
 		
 		self.weekday = line[15:]
-		self.weekday = self.weekday[:-12].strip()
+		self.weekday = self.weekday[:-13].strip()
 		
-		self.date = line[-10:].strip()
+		self.date = line[-11:].strip()
 		
 		self.motd = []
 		getLine(f)
@@ -84,7 +98,11 @@ class Grabber:
 				elif(start == "missing"):
 					self.missing.append(name)
 				elif(start == "hallMonitors"):
-					self.hallMonitors.append(name)
+					tmp = HallMonitor()
+					tmp.id = name[-3:].strip()
+					tmp.when = name[:7].strip()
+					tmp.what = name[7:-3].strip()
+					self.hallMonitors.append(tmp)
 			
 			substr = line[offset:]
 			substitute = Substitute()
@@ -107,7 +125,7 @@ class Grabber:
 			
 			self.substitutes.append(substitute)
 			line = getLine(f)
-        	
+
 
 data = Data()
 data.load("plan0.txt")
