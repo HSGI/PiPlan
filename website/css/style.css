@@ -36,11 +36,11 @@ td {
 	padding-top: 15px;
 }
 
-table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 125px; left: 0%;}
-table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 125px; left: 15%;}
-table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 125px; left: 25%;}
-table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 125px; left: 40%;}
-table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 125px; left: 55%;}
+table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 75px; left: 0%;}
+table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 75px; left: 15%;}
+table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 75px; left: 25%;}
+table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 75px; left: 40%;}
+table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 75px; left: 55%;}
 
 table tr:nth-child(even) {
 	background-color: #fff;
@@ -49,10 +49,6 @@ table tr:nth-child(even) {
 
 table tr:nth-child(odd) {
 	background-color: #54A3D8;
-}
-
-marquee {
-	margin-top: 10px;
 }
 
 #container {
@@ -74,6 +70,7 @@ marquee {
 	z-index: 1;
 }
 
+/*
 .infobar {
 	position: fixed;
 	top: 80px;
@@ -90,7 +87,7 @@ marquee {
 	color: #000;
 	font-weight: bold;
 	font-size: 20px;
-}
+}  */
 
 .header .text {
 	width: 90%;
@@ -105,43 +102,27 @@ h1 {
 	font-family: "Arial",sans-serif;
 }
 
-
-.footer .right {
+.footer {
 	position: fixed;
-	bottom: 0;
-	left: 140px;
-	right: 0;
-	background-color: #33363b;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: #16B50E;
 	height: 45px;
-	font-family: "Arial",sans-serif;
-	font-size: 25px;
-	font-weight: 400;
-	color:#FFF;
+	font-family: "Calibri",sans-serif;
+	font-size: 28px;
+	font-weight: bold;
 	z-index: 1;
 }
 
-.footer .left {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 140px;
-	background-color: #33363b;
-	height: 45px;
-	font-family: "Arial",sans-serif;
-	font-size: 25px;
-	font-weight: 400;
-	color:#FFF;
-	z-index: 1;
-}
-
-.footer p {
-	margin-top: 10px;
-	margin-left: 10px;
+.footer marquee {
+	margin-top: 5px;
+	color: #000;
 }
 
 .content {
 	position: absolute;
-	top: 175px;
+	top: 120px;
 	left: 0px;
 	right: 0px;
 	padding-bottom: 45px;
