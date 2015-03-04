@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import codecs
 
 class Data:
 	def __init__(self):
@@ -29,7 +30,7 @@ class Data:
 		self.data["motd"] = grabber.motd
 	
 	def export(self, path):
-		f = open(path, "w+")
+		f = codecs.open(path, "w+", "utf-8")
 		f.write(json.dumps(self.data, ensure_ascii=False))
 		f.close()
 	
@@ -45,7 +46,7 @@ class Substitute:
 
 class Grabber:
 	def __init__(self, path):
-		f = open(path, "r")
+		f = codecs.open(path, "r", "utf-8")
 		
 		def getLine(f):
 			return f.readline()[:-1]
@@ -55,14 +56,14 @@ class Grabber:
 		self.weekday = line[15:]
 		self.weekday = self.weekday[:-12].strip()
 		
-		self.date = line[-10:]
+		self.date = line[-10:].strip()
 		
 		self.motd = []
 		getLine(f)
 		line = getLine(f)
 		while(not line.startswith("Es fehlen:")):
 			if(line):
-				self.motd.append(line)
+				self.motd.append(line.strip())
 			line = getLine(f)
 		
 		offset = line.find("Vertretungen:")
