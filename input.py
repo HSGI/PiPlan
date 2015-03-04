@@ -62,8 +62,9 @@ class Grabber:
 		getLine(f)
 		line = getLine(f)
 		while(not line.startswith("Es fehlen:")):
+			line = line.strip()
 			if(line):
-				self.motd.append(line.strip())
+				self.motd.append()
 			line = getLine(f)
 		
 		offset = line.find("Vertretungen:")
