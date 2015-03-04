@@ -1,6 +1,6 @@
 function loadResources() {
-    loadFile("data.json", handleData);
-    loadFile("ticker.txt", handleTicker);
+    loadFile("resources/data.json", handleData);
+    loadFile("resources/ticker.txt", handleTicker);
 }
 
 function loadFile(name, callback) {
