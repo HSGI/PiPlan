@@ -12,6 +12,7 @@ class Data:
 		
 		self.data = {}
 		self.data["header"] = {}
+		self.data["header"]["motd"] = grabber.motd
 		self.data["header"]["weekday"] = grabber.weekday
 		self.data["header"]["date"] = grabber.date
 		self.data["missing"] = grabber.missing
@@ -33,8 +34,6 @@ class Data:
 			tmp["room"] = sub.room
 			tmp["description"] = sub.description
 			self.data["substitutes"].append(tmp)
-			
-		self.data["motd"] = grabber.motd
 	
 	def export(self, path):
 		f = codecs.open(path, "w+", "utf-8")
