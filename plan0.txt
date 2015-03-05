@@ -1,0 +1,39 @@
+Vertretungen                                                                    Freitag, 13.02.2015
+Klassen/Kurse außer Haus:
+
+Es fehlen:                  Vertretungen:
+Herr Barlen (ab 7.)         BAB       7.    11         Kurs Barlen: frei
+Frau Demper                 BAB       8.    11         Kurs Barlen: frei
+Herr Feuerstein             DEM       5.    9          (Mensa)
+Frau von Gallera            DEM       6.    9          (Mensa)
+Frau Gilbert                FEU       1.    11         Kurs Feuerstein: frei
+Herr Götte                  FEU       2.    11         Kurs Feuerstein: frei
+Herr Hesse                  GAL       5.    12         Kurs von Gallera: frei
+Herr Neitzel                GAL       6.    12         Kurs von Gallera: frei
+Herr Pohl                   GIL       1.    7f   M     Degel, T. (Mensa)
+Herr Röse                   GIL       2.    7f   M     Degel, T. (Mensa)
+Herr Weimann                GIL       5.    5c   253   Stei, N.
+                            GIL       6.    5c   253   Stei, N.
+Pausenaufsichten:           GÖT       5.    8    77    Einsle, J.
+vor 3. 1.Stock Neubau RH    GÖT       6.    8    77    Einsle, J.
+vor 5. C I Flure LOP        HEM       1.    6a   71    Stei, N.
+vor 5. Hof Ost    OTT       HEM       2.    6a   71    Stei, N.
+vor 5. C II Flure KUS       KRW       7.    13         Kurs Krawczyk: frei
+vor 7. Busaufsicht HER      KRW       8.    13         Kurs Krawczyk: frei
+vor 5. 1.Stock Neubau MER   NEI       1.    8²   174   Hartmann, J.
+                            NEI       2.    8²   174   Hartmann, J.
+                            NEI       3.    5b   252   Einsle, J.
+                            NEI       4.    5b   252   Einsle, J.
+                            NEI       5.    12         Kurs Neitzel: frei
+                            NEI       6.    12         Kurs Neitzel: frei
+                            PL        3.    8    268   Stei, N.
+                            PL        4.    8    268   Stei, N.
+                            RÖA       1.    7d         (Mensa)
+                            RÖA       2.    7d         (Mensa)
+                            RÖA       3.    12         Kurs Röse: frei
+                            RÖA       4.    12         Kurs Röse: frei
+                            WEI       1.    11         Kurs Weimann: frei
+                            WEI       2.    11         Kurs Weimann: frei
+                            WEI       3.    8    51    Degel, T.
+                            WEI       4.    8    51    Degel, T.
+
