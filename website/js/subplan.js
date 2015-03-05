@@ -1,6 +1,6 @@
 function loadResources() {
     loadFile("resources/plan0.json", handleData);
-    loadFile("resources/ticker.txt", handleTicker);
+    //loadFile("resources/ticker.txt", handleTicker);
 }
 
 function loadFile(name, callback) {
@@ -19,7 +19,8 @@ function handleData(data) {
     data = JSON.parse(data);
     var date = document.querySelector("#date");
     date.textContent = data.header.weekday + ", " + data.header.date;
-    var table = document.querySelector(".content table");
+    var tableLeft = document.querySelector(".content table.left");
+    var tableRight = document.querySelector(".content table.right");
     for(var index in data.substitutes) {
         var substitute = data.substitutes[index];
         var row = document.createElement("tr");
@@ -28,7 +29,8 @@ function handleData(data) {
             cell.textContent = substitute[key];
             row.appendChild(cell);
         });
-        table.appendChild(row);
+        tableLeft.appendChild(row);
+        tableRight.appendChild(row.cloneNode(true));
     }
 }
 
