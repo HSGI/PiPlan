@@ -1,0 +1,134 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, 
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, article, aside, 
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, 
+section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+
+table {
+	width: 100%;
+	text-align: left;
+	background-color: #000;
+}
+
+th {
+	background-color: #165a97;
+	color: #fff;
+	font-size: 24px;
+}
+
+td {
+	font-size: 28px;
+	height: 40px;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+
+table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 75px; left: 0%;}
+table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 75px; left: 15%;}
+table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 75px; left: 25%;}
+table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 75px; left: 40%;}
+table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 75px; left: 55%;}
+
+table tr:nth-child(even) {
+	background-color: #fff;
+	
+}
+
+table tr:nth-child(odd) {
+	background-color: #54A3D8;
+}
+
+#container {
+	width: 90%;
+	margin: 0 auto;
+	font-family: "Calibri",sans-serif;
+	margin-top: 100px;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 0px;
+	padding-top: 5px;
+	background: #33363b;
+	height: 75px;
+	z-index: 1;
+}
+
+/*
+.infobar {
+	position: fixed;
+	top: 80px;
+	height: 45px;
+	width: 100%;
+	background: #40E54C;
+	z-index: 2;
+}
+
+.infobar p {
+	margin-top: 12px;
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	font-size: 20px;
+}  */
+
+.header .text {
+	width: 90%;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 600;
+	letter-spacing: -0.5px;
+	font-family: "Arial",sans-serif;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+/*	background-color: #16B50E; */
+	height: 200px;
+	font-family: "Calibri",sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	z-index: 1;
+}
+
+.footer marquee {
+	margin-top: 5px;
+	color: #000;
+}
+
+.content {
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	right: 0px;
+	padding-bottom: 45px;
+	z-index: 0;
+}
+
+#date {
+    display: inline;
+}

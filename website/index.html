@@ -1,9 +1,91 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="author" content="Wasim und Laurenz">
+		<meta charset="UTF-8">
+		<meta name="author" content="The Glorious Leader">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>PiPlan</title>
+		<script>
+		
+			var y = 0;
+			var overflowHeight = 0;
+
+			function init()
+			{
+				overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + 
+								 document.getElementsByTagName("th")[0].offsetHeight + 
+								 document.getElementsByClassName("footer")[0].offsetHeight;
+								 
+			    loadResources();
+			    setTimeout("scrollToBottom()",3000);
+			}
+		
+			function scrollToBottom ()
+			{				
+				window.scrollBy(0, 1);
+				y += 1;
+				
+				if (y <= document.getElementsByTagName("table")[0].offsetHeight - 
+						 document.documentElement.clientHeight + 
+						 overflowHeight)
+				{
+					setTimeout("scrollToBottom()", 30);
+				}
+				else
+				{
+					setTimeout("scrollToTop()", 3000);
+				}
+			}
+			
+			function scrollToTop ()
+			{				
+				window.scrollBy(0, -1);
+				y += -1;
+				
+				if (y > 0)
+				{
+					setTimeout("scrollToTop()", 30);
+				}
+				else
+				{
+					setTimeout("scrollToBottom()", 3000);
+				}
+			}
+			
+		</script>
+		<script src="js/subplan.js"></script>
 	</head>
-	<body>
-		<h1>Hi</h1>
+	<body onLoad="init()">
+		
+		<div id="wrapper">
+			<div class="header">
+				<div class="text"><h1>Vertretungsplan: <div id="date">25.02.2015</div></h1></div>
+			</div>
+			<div id="container">
+				<div class="content">
+					<table cellspacing=0 cellpadding=10>
+						<colgroup>
+							<col width="15%">
+							<col width="10%">
+							<col width="15%">
+							<col width="15%">
+							<col width="45%">
+						</colgroup>
+						<tr>
+							<th>Kürzel</th>
+							<th>Stunde</th>
+							<th>Stufe</th>
+							<th>Raum</th>
+							<th>Anmerkungen</th>
+						</tr> 
+					</table>
+				</div>
+			</div>
+			<div class="footer">
+				<marquee direction="left" scrollamount="10" scrolldelay="1">
+					<img src="nomett.png">
+				</marquee>
+			</div>
+		</div>
 	</body>
 </html>
