@@ -1,5 +1,6 @@
 function loadResources() {
-    loadFile("resources/plan0.json", handleData);
+    loadFile("resources/plan0.json", handleDataForLeftTable);
+    loadFile("resources/plan1.json", handleDataForRightTable);
     //loadFile("resources/ticker.txt", handleTicker);
 }
 
@@ -15,12 +16,21 @@ function loadFile(name, callback) {
     request.send();
 }
 
-function handleData(data) {
+function handleDataForLeftTable(data) {
     data = JSON.parse(data);
     var date = document.querySelector("#date");
     date.textContent = data.header.weekday + ", " + data.header.date;
-    var tableLeft = document.querySelector(".content table.left");
-    var tableRight = document.querySelector(".content table.right");
+	var leftTable = document.querySelector(".content .left");
+	handleDataForTable(data, leftTable);
+}
+
+function handleDataForRightTable(data) {
+    data = JSON.parse(data);
+	var rightTable = document.querySelector(".content .right");
+	handleDataForTable(data, rightTable);
+}
+
+function handleDataForTable(data, table) {
     for(var index in data.substitutes) {
         var substitute = data.substitutes[index];
         var row = document.createElement("tr");
@@ -29,8 +39,7 @@ function handleData(data) {
             cell.textContent = substitute[key];
             row.appendChild(cell);
         });
-        tableLeft.appendChild(row);
-        tableRight.appendChild(row.cloneNode(true));
+        table.appendChild(row);
     }
 }
 

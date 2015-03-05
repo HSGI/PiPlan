@@ -77,7 +77,7 @@ class Grabber:
 		while(not line.startswith("Es fehlen:")):
 			line = line.strip()
 			if(line):
-				self.motd.append()
+				self.motd.append(line)
 			line = getLine(f)
 		
 		offset = line.find("Vertretungen:")
@@ -127,5 +127,5 @@ class Grabber:
 
 
 data = Data()
-data.load("plan.txt")
-data.export("data.json")
+data.load("plan1.txt")
+data.export("plan1.json")
