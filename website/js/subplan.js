@@ -18,7 +18,7 @@ function loadFile(name, callback) {
 
 function handleDataForLeftTable(data) {
     data = JSON.parse(data);
-    var date = document.querySelector("#date");
+    var date = document.querySelector("#date_left");
     date.textContent = data.header.weekday + ", " + data.header.date;
 	var leftTable = document.querySelector(".content .left");
 	handleDataForTable(data, leftTable);
@@ -26,6 +26,8 @@ function handleDataForLeftTable(data) {
 
 function handleDataForRightTable(data) {
     data = JSON.parse(data);
+    var date = document.querySelector("#date_right");
+    date.textContent = data.header.weekday + ", " + data.header.date;
 	var rightTable = document.querySelector(".content .right");
 	handleDataForTable(data, rightTable);
 }
