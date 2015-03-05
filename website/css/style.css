@@ -53,11 +53,11 @@ table:nth-child(2) th:nth-child(3) {position: fixed; width: 8%; height: 30px; to
 table:nth-child(2) th:nth-child(4) {position: fixed; width: 8%; height: 30px; top: 75px; left: 72%;}
 table:nth-child(2) th:nth-child(5) {position: fixed; width: 20%; height: 30px; top: 75px; left: 80%;}
 
-table:nth-child(1) tr:nth-child(even) {background-color: #fff;}
-table:nth-child(1) tr:nth-child(odd) {background-color: #54A3D8;}
+table:nth-child(1) tr:nth-child(even) {background-color: #fff; white-space: nowrap; overflow: hidden;}
+table:nth-child(1) tr:nth-child(odd) {background-color: #54A3D8; white-space: nowrap;  overflow: hidden;}
 
-table:nth-child(2) tr:nth-child(odd) {background-color: #54D865;}
-table:nth-child(2) tr:nth-child(even) {background-color: #fff;}
+table:nth-child(2) tr:nth-child(odd) {background-color: #54D865; white-space: nowrap;  overflow: hidden;}
+table:nth-child(2) tr:nth-child(even) {background-color: #fff; white-space: nowrap;  overflow: hidden;}
 
 #container {
 	width: 90%;
