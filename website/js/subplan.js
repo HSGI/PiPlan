@@ -1,5 +1,5 @@
 function loadResources() {
-    loadFile("resources/data.json", handleData);
+    loadFile("resources/plan0.json", handleData);
     loadFile("resources/ticker.txt", handleTicker);
 }
 
