@@ -14,7 +14,7 @@ if [ -z "$1" ] || [ -z "$2" ] ; then
 	echo "Usage: $0 <input file> <output file>"
 	exit 1
 else
-	$tmpfile=$(mktemp)
+	tmpfile=$(mktemp)
 	pdftotext -layout $1 $tmpfile
 	python input.py $tmpfile $2
 	rm $tmpfile
