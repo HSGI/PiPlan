@@ -79,6 +79,7 @@ table:nth-child(2) tr:nth-child(even) {background-color: #fff; white-space: nowr
 	top: 0;
 	left: 0;
 	width: 50%;
+	z-index: 1;
 }
 
 .header .right {
@@ -86,6 +87,7 @@ table:nth-child(2) tr:nth-child(even) {background-color: #fff; white-space: nowr
 	top: 0;
 	right: 0;
 	width: 50%;
+	z-index: 1;
 }
 
 .header .text {
