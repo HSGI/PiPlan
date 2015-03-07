@@ -20,7 +20,6 @@ section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; f
 table {
 	width: 100%;
 	text-align: left;
-	background-color: #000;
 }
 
 th {
@@ -36,20 +35,23 @@ td {
 	padding-top: 15px;
 }
 
-table th:nth-child(1) {position: fixed; width: 15%; height: 30px; top: 75px; left: 0%;}
-table th:nth-child(2) {position: fixed; width: 10%; height: 30px; top: 75px; left: 15%;}
-table th:nth-child(3) {position: fixed; width: 15%; height: 30px; top: 75px; left: 25%;}
-table th:nth-child(4) {position: fixed; width: 15%; height: 30px; top: 75px; left: 40%;}
-table th:nth-child(5) {position: fixed; width: 45%; height: 30px; top: 75px; left: 55%;}
+table:nth-child(1) th:nth-child(1) {position: fixed; width: 7%; height: 30px; top: 75px; left: 0%;}
+table:nth-child(1) th:nth-child(2) {position: fixed; width: 7%; height: 30px; top: 75px; left: 7%;}
+table:nth-child(1) th:nth-child(3) {position: fixed; width: 8%; height: 30px; top: 75px; left: 14%;}
+table:nth-child(1) th:nth-child(4) {position: fixed; width: 8%; height: 30px; top: 75px; left: 22%;}
+table:nth-child(1) th:nth-child(5) {position: fixed; width: 20%; height: 30px; top: 75px; left: 30%;}
 
-table tr:nth-child(even) {
-	background-color: #fff;
-	
-}
+table:nth-child(2) th:nth-child(1) {position: fixed; width: 7%; height: 30px; top: 75px; left: 50%;}
+table:nth-child(2) th:nth-child(2) {position: fixed; width: 7%; height: 30px; top: 75px; left: 57%;}
+table:nth-child(2) th:nth-child(3) {position: fixed; width: 8%; height: 30px; top: 75px; left: 64%;}
+table:nth-child(2) th:nth-child(4) {position: fixed; width: 8%; height: 30px; top: 75px; left: 72%;}
+table:nth-child(2) th:nth-child(5) {position: fixed; width: 20%; height: 30px; top: 75px; left: 80%;}
 
-table tr:nth-child(odd) {
-	background-color: #54A3D8;
-}
+table:nth-child(1) tr:nth-child(even) {background-color: #fff;}
+table:nth-child(1) tr:nth-child(odd) {background-color: #54A3D8;}
+
+table:nth-child(2) tr:nth-child(odd) {background-color: #fff;}
+table:nth-child(2) tr:nth-child(even) {background-color: #54A3D8;}
 
 #container {
 	width: 90%;
@@ -120,11 +122,20 @@ h1 {
 	color: #fff;
 }
 
-.content {
+.content .left{
 	position: absolute;
 	top: 120px;
 	left: 0px;
+	width: 50%;
+	padding-bottom: 45px;
+	z-index: 0;
+}
+
+.content .right {
+	position: absolute;
+	top: 120px;
 	right: 0px;
+	width: 50%;
 	padding-bottom: 45px;
 	z-index: 0;
 }
