@@ -67,7 +67,7 @@ class Grabber:
 		line = getLine(f)
 		
 		self.weekday = line[15:]
-		self.weekday = self.weekday[:-13].strip()
+		self.weekday = self.weekday[:-12].strip()
 		
 		self.date = line[-11:].strip()
 		
