@@ -23,11 +23,11 @@ function handleData(data) {
     for(var index in data.substitutes) {
         var substitute = data.substitutes[index];
         var row = document.createElement("tr");
-        for(var key in {"id", "lesson", "grade", "room", "description"}) {
+        ["id", "lesson", "grade", "room", "description"].forEach(function(key) {
             var cell = document.createElement("td");
             cell.textContent = substitute[key];
             row.appendChild(cell);
-        }
+        });
         table.appendChild(row);
     }
 }
