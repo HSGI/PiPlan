@@ -107,7 +107,7 @@ h1 {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	background-color: #16B50E;
+	background-color: #33363b;
 	height: 45px;
 	font-family: "Calibri",sans-serif;
 	font-size: 28px;
@@ -117,7 +117,7 @@ h1 {
 
 .footer marquee {
 	margin-top: 5px;
-	color: #000;
+	color: #fff;
 }
 
 .content {
