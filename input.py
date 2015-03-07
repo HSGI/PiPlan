@@ -127,5 +127,5 @@ class Grabber:
 
 
 data = Data()
-data.load("plan0.txt")
-data.export("plan0.json")
+data.load("plan.txt")
+data.export("data.json")
