@@ -67,6 +67,10 @@ table:nth-child(2) tr:nth-child(even) {background-color: #fff; white-space: nowr
 }
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	margin-top: 0px;
 	padding-top: 5px;
 	background: #33363b;
