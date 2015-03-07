@@ -2,6 +2,7 @@
 
 import json
 import codecs
+import sys
 
 class Data:
 	def __init__(self):
@@ -126,6 +127,9 @@ class Grabber:
 			line = getLine(f)
 
 
-data = Data()
-data.load("plan.txt")
-data.export("data.json")
+if(len(sys.argv) != 3):
+	print("Usage: python " + sys.argv[0] + "<input file> <output file>")
+else:
+	data = Data()
+	data.load(sys.argv[1])
+	data.export(sys.argv[2])
