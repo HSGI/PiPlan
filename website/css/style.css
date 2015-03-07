@@ -54,7 +54,7 @@ table tr:nth-child(odd) {
 #container {
 	width: 90%;
 	margin: 0 auto;
-	font-family: "Calibri",sans-serif;
+	font-family: "Calibri,Liberation",sans-serif;
 	margin-top: 100px;
 }
 
@@ -99,7 +99,7 @@ h1 {
 	font-size: 60px;
 	font-weight: 600;
 	letter-spacing: -0.5px;
-	font-family: "Arial",sans-serif;
+	font-family: "Arial,Liberation",sans-serif;
 }
 
 .footer {
@@ -109,7 +109,7 @@ h1 {
 	right: 0px;
 	background-color: #33363b;
 	height: 45px;
-	font-family: "Calibri",sans-serif;
+	font-family: "Calibri,Liberation",sans-serif;
 	font-size: 28px;
 	font-weight: bold;
 	z-index: 1;
