@@ -23,7 +23,7 @@ function handleData(data) {
     for(var index in data.substitutes) {
         var substitute = data.substitutes[index];
         var row = document.createElement("tr");
-        for(var key in substitute) {
+        for(var key in {"id", "lesson", "grade", "room", "description"}) {
             var cell = document.createElement("td");
             cell.textContent = substitute[key];
             row.appendChild(cell);
