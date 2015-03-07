@@ -67,10 +67,6 @@ table:nth-child(2) tr:nth-child(even) {background-color: #fff; white-space: nowr
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
 	margin-top: 0px;
 	padding-top: 5px;
 	background: #33363b;
@@ -78,9 +74,22 @@ table:nth-child(2) tr:nth-child(even) {background-color: #fff; white-space: nowr
 	z-index: 1;
 }
 
+.header .left {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+}
+
+.header .right {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+}
+
 .header .text {
-	width: 90%;
-	margin: 0 auto;
+	margin-left: 10px;
 }
 
 h1 {
