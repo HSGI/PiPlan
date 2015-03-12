@@ -1,126 +1,83 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="author" content="The Glorious Leader">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<title>PiPlan</title>
-		<script>
-		
-			var y = 0;
-			var overflowHeight = 0;
-			var maxTableHeight = 0;
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>PiPlan</title>
+        <script>
+            var overflowHeight = 0;
 
-			function init()
-			{
-				overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + 
-								 document.getElementsByTagName("th")[0].offsetHeight + 
-								 document.getElementsByClassName("footer")[0].offsetHeight;
-				setMaxTableHeight();
-								 
-			    loadResources();
-			    setTimeout("scrollToBottom()",3000);
-			}
-		
-			function scrollToBottom ()
-			{				
-				window.scrollBy(0, 1);
-				y += 1;
-				
-				if (y <= maxTableHeight - 
-						 document.documentElement.clientHeight + 
-						 overflowHeight)
-				{
-					setTimeout("scrollToBottom()", 30);
-				}
-				else
-				{
-					setTimeout("scrollToTop()", 3000);
-				}
-			}
-			
-			function scrollToTop ()
-			{				
-				window.scrollBy(0, -1);
-				y += -1;
-				
-				if (y > 0)
-				{
-					setTimeout("scrollToTop()", 30);
-				}
-				else
-				{
-					setTimeout("scrollToBottom()", 3000);
-				}
-			}
-			
-			function setMaxTableHeight()
-			{
-				if (document.getElementsByTagName("table")[0].offsetHeight <= document.getElementsByTagName("table")[1].offsetHeight)
-					maxTableHeight = document.getElementsByTagName("table")[0].offsetHeight
-				else
-					maxTableHeight = document.getElementsByTagName("table")[1].offsetHeight;
-			}
-			
-		</script>
-		<script src="js/subplan.js"></script>
-	</head>
-	<body onLoad="init()">
-		
-		<div id="wrapper">
-			<div class="header">
-				<div class="left">
-					<div class="text">
-						<h1><div id="date_left">25.02.2015</div></h1>
-					</div>
-				</div>
-				<div class="right">
-					<div class="text">
-						<h1><div id="date_right">26.02.2015</div></h1>
-					</div>
-				</div>
-			</div>
-			<div id="container">
-				<div class="content">
-					<table class="left" cellspacing=0 cellpadding=10>
-						<colgroup>
-							<col width="14%">
-							<col width="14%">
-							<col width="16%">
-							<col width="16%">
-							<col width="40%">
-						</colgroup>
-						<tr>
-							<th>Kürzel</th>
-							<th>Stunde</th>
-							<th>Stufe</th>
-							<th>Raum</th>
-							<th>Anmerkungen</th>
-						</tr> 
-					</table>
-					<table class="right" cellspacing=0 cellpadding=10>
-						<colgroup>
-							<col width="14%">
-							<col width="14%">
-							<col width="16%">
-							<col width="16%">
-							<col width="40%">
-						</colgroup>
-						<tr>
-							<th>Kürzel</th>
-							<th>Stunde</th>
-							<th>Stufe</th>
-							<th>Raum</th>
-							<th>Anmerkungen</th>
-						</tr> 
-					</table>
-				</div>
-			</div>
-			<div class="footer">
-				<marquee direction="left" scrollamount="8" scrolldelay="1">
-					<p>Allgemeiner Unterrichtsschluss: ...</p>
-				</marquee>
-			</div>
-		</div>
-	</body>
+            function init() {
+                overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + document.getElementsByTagName("th")[0].offsetHeight + document.getElementsByClassName("footer")[0].offsetHeight;
+                setMaxTableHeight();
+
+                loadResources();
+                setTimeout("scrollToBottom()", 3000);
+            }
+        </script>
+        <script src="js/subplan.js"></script>
+        <script src="js/scroll.js"></script>
+    </head>
+    
+    <body onLoad="init()">
+        <div id="wrapper">
+            <div class="header">
+                <div class="left">
+                    <div class="text">
+                        	<h1><div id="date_left">25.02.2015</div></h1>
+
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="text">
+                        	<h1><div id="date_right">26.02.2015</div></h1>
+
+                    </div>
+                </div>
+            </div>
+            <div id="container">
+                <div class="content">
+                    <table class="left" cellspacing=0 cellpadding=10>
+                        <colgroup>
+                            <col width="14%">
+                                <col width="14%">
+                                    <col width="16%">
+                                        <col width="16%">
+                                            <col width="40%">
+                        </colgroup>
+                        <tr>
+                            <th>Kürzel</th>
+                            <th>Stunde</th>
+                            <th>Stufe</th>
+                            <th>Raum</th>
+                            <th>Anmerkungen</th>
+                        </tr>
+                    </table>
+                    <table class="right" cellspacing=0 cellpadding=10>
+                        <colgroup>
+                            <col width="14%">
+                                <col width="14%">
+                                    <col width="16%">
+                                        <col width="16%">
+                                            <col width="40%">
+                        </colgroup>
+                        <tr>
+                            <th>Kürzel</th>
+                            <th>Stunde</th>
+                            <th>Stufe</th>
+                            <th>Raum</th>
+                            <th>Anmerkungen</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <marquee direction="left" scrollamount="8" scrolldelay="1">
+                    <p>Allgemeiner Unterrichtsschluss: ...</p>
+                </marquee>
+            </div>
+        </div>
+    </body>
+
 </html>
