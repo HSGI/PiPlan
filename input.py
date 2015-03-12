@@ -64,6 +64,8 @@ class Grabber:
 		
 		def getLine(f):
 			return f.readline()[:-1]
+		def stripStr(str):
+			return str.strip()
 		
 		line = getLine(f)
 		
@@ -107,21 +109,17 @@ class Grabber:
 			substr = line[offset:]
 			substitute = Substitute()
 			
-			substitute.id = substr[:3].strip()
-			substr = substr[4:].lstrip()
-			
-			substitute.lesson = substr[:3].strip()
-			substr = substr[4:].lstrip()
-			
-			substitute.grade = substr[:3].strip()
-			substr = substr[4:].lstrip()
-			
-			roomExists = (len(substr.split("  ")) > 1)
-			if(roomExists):
-				substitute.room = substr[:3].strip()
-				substr = substr[4:].lstrip()
-			
-			substitute.description = substr.strip()
+			slices = map(stripStr, filter(None, substr.split("  ")))
+			if(len(slices) < 4):
+				print("Skipping invalid line substr: "+substr)
+				continue
+
+			substitute.id = slices[0]
+			substitute.lesson = slices[1]
+			substitute.grade = slices[2]
+			if(len(slices) > 4):
+				substitute.room = slices[3]
+			substitute.description = slices[-1]
 			
 			self.substitutes.append(substitute)
 			line = getLine(f)
