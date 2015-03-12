@@ -6,15 +6,41 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>PiPlan</title>
         <script>
-            var overflowHeight = 0;
+            var y = 0;
+			var overflowHeight = 0;
 
-            function init() {
-                overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + document.getElementsByTagName("th")[0].offsetHeight + document.getElementsByClassName("footer")[0].offsetHeight;
-                setMaxTableHeight();
+			function init() {
+				overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + document.getElementsByTagName("th")[0].offsetHeight + document.getElementsByClassName("footer")[0].offsetHeight;
+				loadResources();
+				setTimeout("scrollToBottom()", 3000);
+			}
 
-                loadResources();
-                setTimeout("scrollToBottom()", 3000);
-            }
+			function scrollToBottom() {
+				window.scrollBy(0, 1);
+				y += 1;
+				if (y <= getMaxTableHeight() - document.documentElement.clientHeight + overflowHeight) {
+					setTimeout("scrollToBottom()", 30);
+				} else {
+					setTimeout("scrollToTop()", 3000);
+				}
+			}
+
+			function scrollToTop() {
+				window.scrollBy(0, -1);
+				y += -1;
+				if (y > 0) {
+					setTimeout("scrollToTop()", 30);
+				} else {
+					setTimeout("scrollToBottom()", 3000);
+				}
+			}
+
+			function getMaxTableHeight() {
+				var maxTableHeight = 0;
+				if (document.getElementsByTagName("table")[0].offsetHeight >= document.getElementsByTagName("table")[1].offsetHeight) maxTableHeight = document.getElementsByTagName("table")[0].offsetHeight
+				else maxTableHeight = document.getElementsByTagName("table")[1].offsetHeight;
+				return maxTableHeight;
+			}
         </script>
         <script src="js/subplan.js"></script>
         <script src="js/scroll.js"></script>
