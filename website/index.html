@@ -9,12 +9,14 @@
 		
 			var y = 0;
 			var overflowHeight = 0;
+			var maxTableHeight = 0;
 
 			function init()
 			{
 				overflowHeight = document.getElementsByClassName("header")[0].offsetHeight + 
 								 document.getElementsByTagName("th")[0].offsetHeight + 
 								 document.getElementsByClassName("footer")[0].offsetHeight;
+				setMaxTableHeight();
 								 
 			    loadResources();
 			    setTimeout("scrollToBottom()",3000);
@@ -25,7 +27,7 @@
 				window.scrollBy(0, 1);
 				y += 1;
 				
-				if (y <= document.getElementsByTagName("table")[0].offsetHeight - 
+				if (y <= maxTableHeight - 
 						 document.documentElement.clientHeight + 
 						 overflowHeight)
 				{
@@ -50,6 +52,14 @@
 				{
 					setTimeout("scrollToBottom()", 3000);
 				}
+			}
+			
+			function setMaxTableHeight()
+			{
+				if (document.getElementsByTagName("table")[0].offsetHeight <= document.getElementsByTagName("table")[1].offsetHeight)
+					maxTableHeight = document.getElementsByTagName("table")[0].offsetHeight
+				else
+					maxTableHeight = document.getElementsByTagName("table")[1].offsetHeight;
 			}
 			
 		</script>
